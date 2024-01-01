@@ -1,6 +1,6 @@
 # hyper Docs
 
-> 🚧 Under Construction
+> 🚧 Under Construction. This is a work in progress -- expect missing information. Refer to [the current documentation](https://docs.hyper.io) or reach out [on Slack](https://hyper.io/slack)
 
 The new docs for the hyper Service Framework
 
