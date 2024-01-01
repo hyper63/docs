@@ -5,7 +5,7 @@ export default defineConfig({
   /**
    * Needed since we host the docs on GitHub pages
    */
-  base: '/hyper',
+  base: '/docs',
   title: "hyper",
   description: "Tame technical debt with The hyper Service Framework",
   head: [
