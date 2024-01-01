@@ -53,6 +53,10 @@ export default defineConfig({
             text: 'Clean Cloud Architecture',
             link: '/docs/concepts/clean-cloud-architecture',
           },
+          {
+            text: 'hyper Response Shape',
+            link: '/docs/concepts/hyper-shape',
+          },
         ],
       },
       {
@@ -60,16 +64,20 @@ export default defineConfig({
         link: '/docs/build/index',
         items: [
           {
-            text: 'Custom Adapter',
+            text: '🔐 Securing hyper',
+            link: '/docs/build/securing-hyper'
+          },
+          {
+            text: '⨠ Custom Middleware',
+            link: '/docs/build/custom-middleware',
+          },
+          {
+            text: '🪗 Custom Adapter',
             link: '/docs/build/custom-adapter',
           },
           {
-            text: 'Custom App',
+            text: '📲 Custom App',
             link: '/docs/build/custom-app',
-          },
-          {
-            text: 'Custom Middleware',
-            link: '/docs/build/custom-middleware',
           },
         ],
       },
