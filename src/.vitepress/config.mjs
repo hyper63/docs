@@ -60,6 +60,10 @@ export default defineConfig({
             link: '/docs/build/securing-hyper'
           },
           {
+            text: '🍷 hyper {nano}',
+            link: '/docs/build/hyper-nano'
+          },
+          {
             text: '⨠ Custom Middleware',
             link: '/docs/build/custom-middleware',
           },
