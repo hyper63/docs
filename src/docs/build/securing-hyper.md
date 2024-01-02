@@ -9,7 +9,7 @@ Here is what that middleware might look like, when using the pre-built App [`app
 ::: code-group
 
 ```ts [hyper.config.ts]
-import { appExpress, hyper, type express } from './deps.ts'
+import { appExpress, hyper, jwt, type express } from './deps.ts'
 /**
  * Given a sub and secret, return a hyper Custom Middleware that will
  * check that all incoming requests have a properly signed jwt token

@@ -1,7 +1,7 @@
 # API Reference
 
 The hyper Service Framework is built using the
-[Ports and Adapters](/docs/concepts/ports-and-adapters) architecture, and so can be presented using
+[Ports and Adapters](/docs/concepts/clean-cloud-architecture) architecture, and so can be presented using
 any [hyper Driving Adapter aka. "App"](/docs/build/custom-app) implementation.
 
 For example, a hyper App may choose to expose an HTTP-based RESTful API, for consuming the hyper

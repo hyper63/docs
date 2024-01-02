@@ -1,7 +1,7 @@
 # API Reference (HTTP-based REST 🛌)
 
 The hyper Service Framework is built using the
-[`Ports and Adapters`](/docs/concepts/ports-and-adapters) architecture, and so can be presented (and
+[`Ports and Adapters`](/docs/concepts/clean-cloud-architecture) architecture, and so can be presented (and
 consumed) using any [hyper Driving Adapter aka. `App`](/docs/build/custom-app) implementation.
 
 However, a common presentation of hyper is an HTTP-based RESTful API. The hyper Core team maintains
