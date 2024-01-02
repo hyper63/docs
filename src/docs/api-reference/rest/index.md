@@ -2,10 +2,10 @@
 
 The hyper Service Framework is built using the
 [`Ports and Adapters`](/docs/concepts/clean-cloud-architecture) architecture, and so can be presented (and
-consumed) using any [hyper Driving Adapter aka. `App`](/docs/build/custom-app) implementation.
+consumed) using any [hyper `App`](/docs/concepts/clean-cloud-architecture#hyper-apps-🎮) implementation.
 
 However, a common presentation of hyper is an HTTP-based RESTful API. The hyper Core team maintains
-an HTTP-based RESTful [hyper `App`](/docs/build/custom-app) implementation, using the popular Web
+an HTTP-based RESTful hyper [hyper `App`](/docs/concepts/clean-cloud-architecture#hyper-apps-🎮) implementation, using the popular Web
 Server framework [express](https://expressjs.com/).
 
 This hyper `App` exposes each of the core hyper Services as a set of REST resources:

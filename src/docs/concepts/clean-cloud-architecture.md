@@ -35,7 +35,7 @@ It also allows for the separation of concerns. Each tier of the architecture can
 ### hyper Apps 🎮
 
 The Driving Adapters in the hyper Service Framework are called `Apps` or `Apis`. The hyper Core team maintains
-an HTTP-based RESTful [hyper `App`](/docs/build/custom-app) implementation, using the popular Web
+an HTTP-based RESTful hyper `App` implementation, using the popular Web
 Server framework [express](https://expressjs.com/). You can see the API Reference [here](/docs/api-reference/rest/index)
 
 In the future, we would like to see more app offerings. A CLI app, a GRPC app, we've even discussed a Service Worker app, so that hyper could be run entirely in the browser, on a Service Worker 😎.
