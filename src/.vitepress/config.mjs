@@ -66,11 +66,7 @@ export default defineConfig({
           {
             text: '🪗 Custom Adapter',
             link: '/docs/build/custom-adapter',
-          },
-          {
-            text: '📲 Custom App',
-            link: '/docs/build/custom-app',
-          },
+          }
         ],
       },
       {
