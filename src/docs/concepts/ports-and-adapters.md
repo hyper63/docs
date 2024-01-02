@@ -1,3 +1,0 @@
-# Ports and Adapters
-
-TODO

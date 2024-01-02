@@ -51,7 +51,7 @@ If need the ability to perform Business Reporting and Analytics, using complex a
 
 ## Create a `Data` Service
 
-Create a hyper `Data` Service in the [`Domain`](/docs/concepts/terminology#domain).
+Create a hyper `Data` Service in the hyper [`Domain`](/docs/concepts/clean-cloud-architecture#hyper-domain).
 
 ::: code-group
 
@@ -81,7 +81,7 @@ curl -X PUT https://$HOST/data/$DOMAIN
 
 ## Destroy a `Data` Service
 
-Destroy a hyper `Data` Service in the [`Domain`](/docs/concepts/terminology#domain). This will remove all documents stored in the `Data` Service.
+Destroy a hyper `Data` Service in the hyper [`Domain`](/docs/concepts/clean-cloud-architecture#hyper-domain). This will remove all documents stored in the `Data` Service.
 
 :::danger
 This is a destructive operation that will destroy the `Data` Service and all documents stored within it. Be really sure you want to do this, before destroying your `Data` Service.

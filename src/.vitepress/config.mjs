@@ -38,23 +38,15 @@ export default defineConfig({
         text: '🤓 Concepts',
         items: [
           {
-            text: 'Why hyper',
+            text: '⚡️ Why hyper',
             link: '/docs/concepts/why',
           },
           {
-            text: 'Terminology',
-            link: '/docs/concepts/terminology',
-          },
-          {
-            text: 'Ports and Adapters',
-            link: '/docs/concepts/ports-and-adapters',
-          },
-          {
-            text: 'Clean Cloud Architecture',
+            text: '🧼 Clean Cloud Architecture',
             link: '/docs/concepts/clean-cloud-architecture',
           },
           {
-            text: 'hyper Response Shape',
+            text: '🟨 hyper Response Shape',
             link: '/docs/concepts/hyper-shape',
           },
         ],

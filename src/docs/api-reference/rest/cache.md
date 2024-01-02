@@ -48,7 +48,7 @@ A good seeding strategy requires that you know when cache hits occur to ensure t
 
 ## Create a `Cache` Service
 
-Create a hyper `Cache` Service in the [`Domain`](/docs/concepts/terminology#domain).
+Create a hyper `Cache` Service in the hyper [`Domain`](/docs/concepts/clean-cloud-architecture#hyper-domain).
 
 ::: code-group
 
@@ -78,7 +78,7 @@ curl -X PUT https://$HOST/cache/$DOMAIN
 
 ## Destroy a `Cache` Service
 
-Destroy a hyper `Cache` Service in the [`Domain`](/docs/concepts/terminology#domain). This will remove all key-value pairs stored in the `Cache` Service.
+Destroy a hyper `Cache` Service in the hyper [`Domain`](/docs/concepts/clean-cloud-architecture#hyper-domain). This will remove all key-value pairs stored in the `Cache` Service.
 
 :::danger
 This is a destructive operation that will destroy the `Cache` Service and all key-value pairs stored within it. Be really sure you want to do this, before destroying your `Cache` Service.
