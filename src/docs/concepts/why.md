@@ -1,5 +1,11 @@
 # Why hyper
 
+<br/>
+
+![all hyper services](/all.svg)
+
+<br/>
+
 hyper is a service framework -- a collection of core application services wrapped in a common API.
 
 Instead of tightly connecting your application business logic to the cloud services and products your app depends on, hyper enables you to loosely couple these cloud services, giving your application clear separation and future extensibility and scalability.
@@ -11,6 +17,8 @@ Read more about [Why we built hyper](https://blog.hyper.io/why-start-hyper/)
 ## The Scaling Dilemma
 
 Once organizations achieve product-market fit, their application often requires restructuring to accommodate growth aka “scale”.
+
+![scaling dilemma](/scale.png)
 
 Because Cloud providers are increasingly complex, increasingly specialized, and sticky by design, the decision “to scale” results in drastic upfront costs and ever-increasing recurring costs to iterate.
 
