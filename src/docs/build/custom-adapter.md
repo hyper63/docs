@@ -208,7 +208,7 @@ Links that do not call anything on `next` are referred to as "Terminating Links"
 
 We will dive more into what can be done with this later. For now, just understand that this composition is the reason for the interesting signature of `link`.
 
-:::tip
+:::info
 Plugin Linking is an advanced concept; you probably don't need it.
 
 As a general rule of thumb, your `Adapter` probably will not need to use `next` if it fully implements the `Port` and does not call `next`

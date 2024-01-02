@@ -4,7 +4,7 @@ hyper `Middleware` allows you to add additional functionality to a hyper `App`. 
 
 In the [hyper Config file](/docs/host/hyper-config), you may specify an array of `middleware`. This `middleware` is then passed to the hyper `App` under `services.middleware`.
 
-:::tip
+:::info
 It is up to the hyper `App` implementation to properly apply the `Middleware` to itself.
 
 In other words, the `Middleware` is specific to an `App` implementation

@@ -16,6 +16,6 @@ This hyper `App` exposes each of the core hyper Services as a set of REST resour
 - [`Queue`](queue): hyper `Queue` Services available on the hyper `Server`
 - [`Search`](search): hyper `Search` Services available on the hyper `Server`
 
-:::tip
+:::info
 Be sure to include any appropriate authN/Z on the request. See [Securing your hyper `Server`](/docs/build/securing-hyper)
 :::

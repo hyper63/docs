@@ -265,7 +265,7 @@ Query the `Cache` Service for all key-value pairs, whose `key` matches the provi
 
 For example `movie-*`, `*-1984`, or `movie*1984`
 
-:::tip
+:::info
 Remember, you `Cache` Service `key`s do not need to be strictly `_id` from a hyper `Data` Service. They can be anything! You can store more information in your `key`s, such that a pattern can fetch multiple cached documents in a single request.
 :::
 
