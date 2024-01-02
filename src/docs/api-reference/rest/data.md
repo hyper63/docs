@@ -1,6 +1,6 @@
 # hyper `Data` Service
 
-A hyper `Data` service is a document data store for storing JSON documents. List, query, add, update, and delete documents. You can also create indexes to improve query performance.
+A hyper `Data` service is a schemaless document data store for storing JSON documents. List, query, add, update, and delete documents. You can also create indexes to improve query performance.
 
 A hyper `Data` service ought to be conceptualized as a single "pool" of documents. It is schemaless by design, leaving schema enforcement up to the consuming applications business logic.
 
@@ -9,6 +9,45 @@ Be sure to include any appropriate authN/Z on the request. See [Securing your hy
 :::
 
 [[toc]]
+
+## Features
+
+- Create, Remove, Update, and Delete documents
+- Query Documents using MongoDB-style selectors
+- List Documents, to fetch documents by `_id` or to perform range queries against a matcher
+- Index Documents, to improve query performance
+
+## Why `Data`?
+
+Most applications need a way to store persistent data, and then retrieve those pieces of data for a given use-case. In other words, a database. A hyper `Data` Service, can serve as a database for your application.
+
+### Why Schemaless?
+
+> The long of this section can be found [in this blog post](https://blog.hyper.io/document-database-design/)
+
+There is a ton of business rules encoded into the relations between business entities, and when data is relational, many teams reach for a relational database to enforce the definition and adherence to a strict normalized table schema. The database _forces_ a taxonomy onto data, early on. At first, this might seem like a good thing. But if software development proves one thing, it's that humans are really bad at predicting the future.
+
+Having relational data does not mean you ought to use your _database_ to enforce those relations. Too often, the persistence model becomes conflated with the business model. In order to assert the business rules are correct, you need a running database, and not just _any_ database, but a specific DBMS. The result is massive coupling to a particular database solution, the inability to assert business rules are correct without a database, and huge switching cost.
+
+:::info
+Data normalization was mainly designed at a time when storage and memory were very expensive. There is **nothing** architecturally significant about arranging data into rows and columns.
+
+Remember, the rise of relational databases was, in no small part, an outgrowth of [Clever Marketing](https://blog.cleancoder.com/uncle-bob/2012/05/15/NODB.html).
+:::
+
+#### Decouple Business Rules from the Services Tier
+
+A core principle of The hyper Service Framework is to encourage the encapsulation of business rules _away_ from the layers that are not in the applications control, or that could change ie. Cloud services, or more generally speaking, the services tier.
+
+We've found that a Schemaless Document-oriented persistence model is the best way to encourage this. It forces those relations and data types to be checked in _business logic_, and where you can _test_ all of your business rules and without having to run a database to do it.
+
+The result is high confidence in the relational model, decoupling from any particular DBMS, and most importantly the ability to _change_ that model over time, without massive Database migrations.
+
+#### But I need joins for Business Reporting/Analytics
+
+Your transactional Database, powering your transactional application, shouldn't be used for reporting/analytics anyway! Not only are those separate use-cases, which often require a separate data model, but it can impact the performance of your application -- it only takes one badly performing `JOIN` to bring a Relational Database to its knees. Thus the DBA and all the red tape around databases were born.
+
+If need the ability to perform Business Reporting and Analytics, using complex and deep `JOIN`s, this is what a tool like AWS RedShift, or GCP BigQuery are for (hyper `Port` coming soon 😎). A combination of ETL jobs can efficiently sync documents from your transactional database to your analytics/reporting database.
 
 ## Create a `Data` Service
 
@@ -72,7 +111,7 @@ curl -X DELETE https://$HOST/data/$DOMAIN
 | Status |            Description            |                     Response |
 | ------ | :-------------------------------: | ---------------------------: |
 | 201    |  The `Data` Service was created   |               `{ ok: true }` |
-| 409    | The `Data` Service already exists | `{ ok: false, status: 409 }` |
+| 404    | The `Data` Service does not exist | `{ ok: false, status: 404 }` |
 
 ## Create a Document
 
