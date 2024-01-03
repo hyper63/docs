@@ -60,12 +60,16 @@ export default defineConfig({
         link: '/docs/build/index',
         items: [
           {
-            text: '🔐 Securing hyper',
-            link: '/docs/build/securing-hyper'
+            text: '🔌 hyper connect',
+            link: '/docs/build/hyper-connect'
           },
           {
             text: '🍷 hyper {nano}',
             link: '/docs/build/hyper-nano'
+          },
+          {
+            text: '🔐 Securing hyper',
+            link: '/docs/build/securing-hyper'
           },
           {
             text: '⨠ Middleware',
