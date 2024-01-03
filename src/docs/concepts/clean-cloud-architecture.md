@@ -28,7 +28,7 @@ It also allows for the separation of concerns. Each tier of the architecture can
 
 > The only time we must touch multiple tiers is if a Port is changed. And that is usually a find and replace
 
-## hyper Clean Architecture Lingua Franca 📚
+## hyper Lingua Franca 📚
 
 ![hyper-architecture](/hyper-architecture.png)
 

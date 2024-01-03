@@ -1,21 +1,22 @@
 # The `hyper` Config File
 
-The config file is the core manifest for hyper, it pulls all of the adapters into the fold and configures, and applies them to the core module.
+The Config file is the core manifest for hyper, it pulls all of the adapters into the fold, configures, and applies them to hyper `Core`.
 
-The config file is where you choose the `App` and set of `Adapters` you would like hyper `Core` to use. The hyper Service Framework uses a config file to bootstrap the hyper `Server` with the provided `App` and `Adapter`.
+The Config file is where you choose the `App` and set of `Adapters` you would like hyper `Core` to use.
 
 A Config file will look like this:
 
 ::: code-group
 
 ```js [hyper.config.js]
-// hyper driving adapter
+// hyper App
 import express from "https://raw.githubusercontent.com/hyper63/hyper/hyper-app-express%40v1.2.1/packages/app-express/mod.ts";
 
-// hyper driven adapters
+// hyper Adapters
 import mongodb from "https://raw.githubusercontent.com/hyper63/hyper-adapter-mongodb/v3.3.0/mod.ts";
 import redis from "https://raw.githubusercontent.com/hyper63/hyper-adapter-redis/v3.1.2/mod.js";
 
+// hyper Middleware
 import { auth } from "./auth.ts";
 
 export default {
@@ -97,6 +98,7 @@ This will download hyper `Core`, load your configuration file, and start up a hy
 You can also start hyper by importing it using `Deno`
 
 ```ts
+// hyper Core
 import hyper from "https://raw.githubusercontent.com/hyper63/hyper/hyper%40v4.3.2/packages/core/mod.ts";
 
 hyper({

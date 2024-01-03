@@ -49,6 +49,10 @@ export default defineConfig({
             text: '🟨 hyper Response Shape',
             link: '/docs/concepts/hyper-shape',
           },
+          {
+            text: '📚 Glossary',
+            link: '/docs/concepts/glossary',
+          },
         ],
       },
       {
@@ -64,17 +68,17 @@ export default defineConfig({
             link: '/docs/build/hyper-nano'
           },
           {
-            text: '⨠ Custom Middleware',
-            link: '/docs/build/custom-middleware',
+            text: '⨠ Middleware',
+            link: '/docs/build/middleware',
           },
           {
-            text: '🪗 Custom Adapter',
+            text: '🪗 Custom Adapters',
             link: '/docs/build/custom-adapter',
           }
         ],
       },
       {
-        text: '🤖 Host',
+        text: '🚢 Host',
         link: '/docs/host/index',
         items: [
           {

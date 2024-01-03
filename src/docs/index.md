@@ -29,12 +29,12 @@ Understand the why and how of the hyper Service Framework.
 
 ## Host
 
-Learn how to host the hyper Service Framework Server.
+Learn how to host a hyper Service Framework `Server`.
 
 [Read More](./host/index)
 
 ## Build
 
-Learn how to build your own hyper Port adapters and apps.
+Learn how to build your own hyper `Port` `Adapters` and `Apps`.
 
 [Read More](./build/index)
