@@ -29,3 +29,15 @@ The composed components described above:
 - A hyper `Adapter`
 
 Generally, these are referred using the hyper `Port` names ie. `Data` Service, `Cache` Service, `Storage` Service, `Queue` Service, and `Search` Service
+
+## hyper Server
+
+A hyper instance that hosts hyper `Services` and may be consumed via the hyper `App` public API.
+
+## hyper Domain
+
+hyper `Services` are created on a hyper `Server`, within a hyper `Domain`.
+
+A `Domain` is simply a logical grouping of hyper `Services` hosted on a hyper `Server`.
+
+hyper `Domains` are commonly used to distinguish sets of hyper `Services` across applications ie. a `Foo App` `Domain` and `Bar App` `Domain`.
