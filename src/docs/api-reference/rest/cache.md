@@ -107,7 +107,7 @@ curl -X DELETE https://$HOST/cache/$DOMAIN
 
 | Status |            Description             |                     Response |
 | ------ | :--------------------------------: | ---------------------------: |
-| 201    |  The `Cache` Service was created   |               `{ ok: true }` |
+| 200    | The `Cache` Service was destroyed  |               `{ ok: true }` |
 | 404    | The `Cache` Service does not exist | `{ ok: false, status: 404 }` |
 
 ## Cache a Document

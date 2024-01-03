@@ -110,7 +110,7 @@ curl -X DELETE https://$HOST/data/$DOMAIN
 
 | Status |            Description            |                     Response |
 | ------ | :-------------------------------: | ---------------------------: |
-| 201    |  The `Data` Service was created   |               `{ ok: true }` |
+| 200    | The `Data` Service was destroyed  |               `{ ok: true }` |
 | 404    | The `Data` Service does not exist | `{ ok: false, status: 404 }` |
 
 ## Create a Document
