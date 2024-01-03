@@ -2,7 +2,7 @@
 
 In most cases, the hyper Server will need to validate incoming requests, so as to prevent unwanted access to hyper `Services` running on the hyper `Server`.
 
-A common practice is to add [Custom Middleware](/docs/build/custom-middleware) to the hyper Config that is added to the hyper `Server` and enforces the AuthN/Z desired. For example, when using an HTTP based hyper `App`, a `Custom Middleware` could be used to check and verify incoming requests, perhaps a `Bearer` token in the `Authorization` header.
+A common practice is to add [Custom Middleware](/docs/build/middleware) to the hyper Config that is added to the hyper `Server` and enforces the AuthN/Z desired. For example, when using an HTTP based hyper `App`, a `Custom Middleware` could be used to check and verify incoming requests, perhaps a `Bearer` token in the `Authorization` header.
 
 Here is what that middleware might look like, when using the pre-built App [`app-express`](https://github.com/hyper63/hyper/tree/main/packages/app-express):
 
