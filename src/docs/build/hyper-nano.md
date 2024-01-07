@@ -31,7 +31,7 @@ There are binaries built for each major platform:
 - [Darwin ARM (Mac M1)](https://hyperland.s3.amazonaws.com/hyper-aarch64-apple-darwin)
 - [Windows](https://hyperland.s3.amazonaws.com/hyper-x86_64-pc-windows-msvc.exe)
 
-### Node Usage
+## Node Usage
 
 Alternatively, if you use `Node`, you may run `hyper-nano` using `npx`:
 
@@ -39,7 +39,7 @@ Alternatively, if you use `Node`, you may run `hyper-nano` using `npx`:
 npx hyper-nano --domain=foobar --experimental --data --cache ...
 ```
 
-### Deno Usage
+## Deno Usage
 
 Alternatively, if you use `Deno` you may run `hyper-nano` directly from the source:
 
@@ -84,6 +84,63 @@ Or consume via HTTP
 
 ```sh
 curl http://127.0.0.1:6363/data/test
+```
+
+## Bootstrapping services
+
+> **This feature is experimental and will need the `--experimental` flag to be enabled**
+
+`hyper nano` can be supplied arguments to create services on startup:
+
+- `--data`: create a hyper data service on startup
+- `--cache`: create a hyper cache service on startup
+- `--storage`: createa a hyper storage service on startup
+
+Other command line arguments can be provided:
+
+- `--purge`: destroy the existing services. You may also pass in which service types to purge. ie
+  `./nano --experimental --data --cache --storage --purge=data,cache` will delete `data` and
+  `cache`, but not `storage`
+- `--domain`: the name of the domain your services will be created under. This defaults to `test`
+
+Examples:
+
+```sh
+# Listen on 6363
+./nano
+
+# Purge the existing data service, then create a new one in test domain
+./nano --experimental --data --purge
+
+# Purge the cache service, then create data and cache services in test domain
+./nano --experimental --data --cache --purge=cache
+
+# Purge data, cache, and storage, then create data, cache, and storage services in test domain
+./nano --experimental --data --cache --storage --purge
+```
+
+or programmatically:
+
+```js
+import { main } from "https://raw.githubusercontent.com/hyper63/hyper/main/images/nano/main.js";
+
+/**
+ * - Listen on 6363
+ * - Purge data service in test domain
+ * - Create data, cache, and storage services in the test domain
+ */
+await main({
+  domain: "test",
+  experimental: true,
+  services: {
+    data: true,
+    cache: true,
+    storage: true,
+  },
+  purge: {
+    data: true,
+  },
+});
 ```
 
 Learn more about hyper `{nano}` [here](https://github.com/hyper63/hyper/tree/main/images/nano)
