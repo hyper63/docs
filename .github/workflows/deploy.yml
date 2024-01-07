@@ -1,9 +1,12 @@
 name: 📚 Build and Deploy Docs
 
 on:
+  pull_request:
+    branches:
+      - "main"
   push:
     tags:
-      - 'hyper-docs@*'
+      - "hyper-docs@*"
 
   workflow_dispatch:
 
@@ -43,17 +46,18 @@ jobs:
         run: |
           yarn build
           touch src/.vitepress/dist/.nojekyll
-  
+
       - name: 🔼 Upload Artifact
         uses: actions/upload-pages-artifact@v2
         with:
           path: src/.vitepress/dist
 
   deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: build
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
     runs-on: ubuntu-latest
     name: Deploy
     steps:
