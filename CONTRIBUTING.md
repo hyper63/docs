@@ -1,4 +1,4 @@
-# Contributing to the Cookbook
+# Contributing to the Docs
 
 👍🎉First off, thanks for taking the time to contribute🎉👍
 
@@ -17,7 +17,7 @@ The docs are layed out in 4 different sections.
 | Build         | References and guides on how to build with hyper               |
 | Host          | Guides on how to host hyper                                    |
 
-Depending on what you are writing, it will live in one of these sections
+Depending on what you are writing, it will live in one of these sections.
 
 ### Building
 
