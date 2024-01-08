@@ -211,7 +211,7 @@ the action.
 
 ---
 
-### Verify Signature
+### Verify hyper `Queue` Service Request Signatures
 
 A hyper `Queue` Service targets your specified web hook worker to receive jobs. In order to secure that
 endpoint to only receive jobs from a hyper `Queue` service, you can provide a secret when creating the hyper `Queue`. This `Queue` will then sign requests it sends to your webhook worker using a sha256 `nounce` timestamp and a signature in the `X-HYPER-SIGNATURE` header.

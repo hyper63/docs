@@ -121,6 +121,9 @@ A hyper `Data` Service document is a JSON document with one to many fields. An `
 
 :::info
 We recommend providing your own `_id`, when creating a document, that is appropriate for your use-case.
+
+Use a schema validation library like [`Zod`](https://github.com/colinhacks/zod) to verify documents are the shape your business logic expects, prior to persisting in your hyper `Data` Service.
+:::
 :::
 
 :::info
@@ -153,6 +156,7 @@ curl -X POST https://$HOST/data/$DOMAIN
 | Status |                Description                |                     Response |
 | ------ | :---------------------------------------: | ---------------------------: |
 | 201    |         The document was created          |    `{ ok: true, id: '...' }` |
+| 404    |     The `Data` Service does not exist     | `{ ok: false, status: 404 }` |
 | 409    | A document with that `_id` already exists | `{ ok: false, status: 409 }` |
 
 ## Retrieve a Document
