@@ -195,7 +195,7 @@ curl -X GET https://$HOST/cache/$DOMAIN/movie-1
 
 | Status |                                     Description                                     |                     Response |
 | ------ | :---------------------------------------------------------------------------------: | ---------------------------: |
-| 201    |                              The document was created                               |   `{ ok: true, doc: {...} }` |
+| 201    |                             The document was retrieved                              |   `{ ok: true, doc: {...} }` |
 | 404    | A document stored at the `key` does not exist or the `Cache` Service does not exist | `{ ok: false, status: 404 }` |
 
 ## Replace a Document
@@ -229,7 +229,7 @@ See [`ttl` Format](#ttl-format) on how to format the `ttl` if provided.
 
 | Status |            Description             |                     Response |
 | ------ | :--------------------------------: | ---------------------------: |
-| 200    |      The document was created      |               `{ ok: true }` |
+| 200    |     The document was replaced      |               `{ ok: true }` |
 | 404    | The `Cache` Service does not exist | `{ ok: false, status: 404 }` |
 
 ## Remove a Document

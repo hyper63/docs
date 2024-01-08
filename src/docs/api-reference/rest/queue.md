@@ -43,6 +43,13 @@ A hyper queue will generate an `X-HYPER-SIGNATURE`, **if and only if** you provi
 Some frameworks, for example `NextJS` , will lowercase headers names ie. `x-hyper-signature`, so be sure to take this into account, when checking for the signature.
 :::
 
+### Input
+
+| Field    | Type [optional] |                                                                                 Description |
+| -------- | :-------------: | ------------------------------------------------------------------------------------------: |
+| `target` |     string      |                                                             The URL of your worker endpoint |
+| `secret` |    [string]     | The secret used to sign requests sent to your worker endpoint, by the hyper `Queue` Service |
+
 ::: code-group
 
 ```js [node.js]
